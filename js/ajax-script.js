@@ -3,7 +3,9 @@
     event.preventDefault();
     $.ajax({
       method: 'get',
-      url: qod_vars.rest_url + 'wp/v2/posts/',
+      url:
+        qod_vars.rest_url +
+        'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       data: {
         comment_status: 'closed'
       },
@@ -12,25 +14,29 @@
       }
     }).done(function(response) {
       console.log(response);
-      randomPost = response[Math.floor(Math.random() * response.length)];
-      changePost(randomPost);
+      changeContent(newQuoteMarkup(response[0]));
     });
   });
 
-  function changePost(quote) {
-    newId = `post-${quote.id}`;
+  function changeContent(content) {
     $('article').removeClass($('article').attr('id'));
-    $('article').addClass(newId);
-    $('article').attr('id', newId);
-    $('.entry-content').html(quote.content.rendered);
-    $('.entry-info').html(
-      `<h2 class='author-name'>${quote.title.rendered}</h2>`
-    );
-    if (quote._qod_quote_source_url && quote._qod_quote_source) {
-      $('.entry-info')
-        .append(`<span class='author-source'>, </span><a target='_blank' class='author-source'
-            href=${quote._qod_quote_source_url}
-            >${quote._qod_quote_source}</a>`);
-    }
+    $('article').addClass(content.id);
+    $('article').attr('id', content.id);
+    $('.entry-content').html(content.text);
+    $('.entry-info').html(content.author + content.link);
+  }
+  function newQuoteMarkup(quote) {
+    return {
+      id: `post-${quote.id}`,
+      text: quote.content.rendered,
+      author: `<h2 class='author-name'>&mdash;${quote.title.rendered}</h2>`,
+      link: quote._qod_quote_source_url
+        ? `<span class='author-source'>, <a class='author-source'
+      href=${quote._qod_quote_source_url}
+      >${quote._qod_quote_source}</a></span>`
+        : quote._qod_quote_source
+        ? `<span class='author-source'>, ${quote._qod_quote_source}</span>`
+        : ''
+    };
   }
 })(jQuery);

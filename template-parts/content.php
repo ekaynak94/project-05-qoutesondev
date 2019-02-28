@@ -13,6 +13,6 @@
 	</div><!-- .entry-content -->
 
 	<div class="entry-info">
-		<h2 class='author-name'><?php the_title();?></h2> 	
+		<h2 class='author-name'>&mdash;<?php the_title();?></h2> 	
 	</div>
 </article><!-- #post-## -->
