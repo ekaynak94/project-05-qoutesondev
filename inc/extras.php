@@ -44,7 +44,7 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
 
 
 function quotesondev_get_quote( $query ) {
-	if(!(is_admin()||$query->is_main_query())){return;}
+	if(is_admin()||!$query->is_main_query()){return;}
 	if ( is_home()) {
 		$query->set( 'posts_per_page', 1 );
 	}
