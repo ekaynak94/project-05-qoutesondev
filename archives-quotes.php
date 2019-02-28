@@ -26,7 +26,7 @@ get_header(); ?>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</li>
 						<?php endforeach; wp_reset_postdata(); ?>
-					</ul>
+					</ul>	
 				</div>
 
 				<div class='archive-catagories'>
