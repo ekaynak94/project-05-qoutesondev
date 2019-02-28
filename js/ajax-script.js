@@ -13,12 +13,12 @@
         xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
       }
     }).done(function(response) {
-      console.log(response);
       changeContent(newQuoteMarkup(response[0]));
     });
   });
 
   function changeContent(content) {
+    //Changes the markup for the page to display a new quote
     $('article').removeClass($('article').attr('id'));
     $('article').addClass(content.id);
     $('article').attr('id', content.id);
@@ -26,17 +26,19 @@
     $('.entry-info').html(content.author + content.link);
   }
   function newQuoteMarkup(quote) {
+    //Returns an object that has the markup for the new quote and its content
     return {
       id: `post-${quote.id}`,
       text: quote.content.rendered,
       author: `<h2 class='author-name'>&mdash;${quote.title.rendered}</h2>`,
-      link: quote._qod_quote_source_url
-        ? `<span class='author-source'>, <a class='author-source'
+      link:
+        quote._qod_quote_source_url && quote._qod_quote_source
+          ? `<span class='author-source'>, <a class='author-source'
       href=${quote._qod_quote_source_url}
       >${quote._qod_quote_source}</a></span>`
-        : quote._qod_quote_source
-        ? `<span class='author-source'>, ${quote._qod_quote_source}</span>`
-        : ''
+          : quote._qod_quote_source
+          ? `<span class='author-source'>, ${quote._qod_quote_source}</span>`
+          : ''
     };
   }
 })(jQuery);
