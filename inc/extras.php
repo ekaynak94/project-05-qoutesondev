@@ -47,6 +47,7 @@ function quotesondev_get_quote( $query ) {
 	if(is_admin()||!$query->is_main_query()){return;}
 	if ( is_home()) {
 		$query->set( 'posts_per_page', 1 );
+		$query->set('orderby', 'rand');
 	}
 }
 add_action( 'pre_get_posts', 'quotesondev_get_quote',1);
