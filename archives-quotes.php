@@ -16,7 +16,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class='archive-posts'>
-					<h2>Archive Authors</h2>
+					<h2>Quote Authors</h2>
 					<?php
 						$posts=get_posts(array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ));
 					?>
