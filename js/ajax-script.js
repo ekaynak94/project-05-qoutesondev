@@ -42,9 +42,9 @@
       url: `${qod_vars.home_url}/${quote.slug}/`,
       source:
         quote._qod_quote_source_url && quote._qod_quote_source
-          ? `<span class='author-source'>, <a class='author-source'
-      href=${quote._qod_quote_source_url}
-      >${quote._qod_quote_source}</a></span>`
+          ? `<span class='author-source'>, <a href=${
+              quote._qod_quote_source_url
+            }>${quote._qod_quote_source}</a></span>`
           : quote._qod_quote_source
           ? `<span class='author-source'>, ${quote._qod_quote_source}</span>`
           : ''
@@ -54,10 +54,10 @@
   $('#submit-form').on('submit', function(event) {
     event.preventDefault();
     const info = {
-      title: $('#quote-author').val(),
-      content: $('#quote-text').val(),
-      _qod_quote_source: $('#quote-source').val(),
-      _qod_quote_source_url: $('#quote-url').val()
+      title: $('#form-author').val(),
+      content: $('#form-text').val(),
+      _qod_quote_source: $('#form-source').val(),
+      _qod_quote_source_url: $('#form-source-url').val()
     };
 
     $.ajax({

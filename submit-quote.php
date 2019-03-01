@@ -17,13 +17,13 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					<?php if(is_user_logged_in()):?>
+					<?php if(is_user_logged_in()&&current_user_can('edit_posts')):?>
 						<form id="submit-form">
 							<label>Author of Quote</label>
-							<input type="text" name="quote-author" id="quote-author" />
-							<label>Quote</label> <textarea rows="4" cols="5" id="quote-text"></textarea>
-							<label>Where did you find this quote? (e.g. book name)</label> <input type="text" name="quote-source" id="quote-source" />
-							<label>Provide the URL of the quote source, if availiable</label> <input type="url" name="quote-url" id="quote-url" />
+							<input type="text" name="form-author" id="form-author" />
+							<label>Quote</label> <textarea rows="4" cols="5" id="form-text"></textarea>
+							<label>Where did you find this quote? (e.g. book name)</label> <input type="text" name="form-source" id="form-source" />
+							<label>Provide the URL of the quote source, if availiable</label> <input type="url" name="form-source-url" id="form-source-url" />
 							<input type="submit" value="Submit Quote">
 						</form>
 
