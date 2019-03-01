@@ -43,11 +43,15 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
 
 
 
-function qod_get_new_quote( $query ) {
+function qod_items_per_page( $query ) {
 	if(is_admin()||!$query->is_main_query()){return;}
 	if ( is_home()) {
 		$query->set( 'posts_per_page', 1 );
 		$query->set('orderby', 'rand');
 	}
+	if ( is_category()||is_tag()) {
+		$query->set( 'posts_per_page', 5 );
+	}
+
 }
-add_action( 'pre_get_posts', 'qod_get_new_quote',1);
+add_action( 'pre_get_posts', 'qod_items_per_page',1);
