@@ -29,8 +29,8 @@ get_header(); ?>
 					</ul>	
 				</div>
 
-				<div class='archive-catagories'>
-					<h2>Catagories</h2>
+				<div class='archive-categories'>
+					<h2>Categories</h2>
 					<ul>
 						<?php wp_list_categories(array(
 							'taxonomy'            => 'category',

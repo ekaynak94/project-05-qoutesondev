@@ -1,4 +1,5 @@
 (function($) {
+  // Event listener for quote button
   $('#another-quote').on('click', function(event) {
     event.preventDefault();
     $.ajax({
@@ -41,4 +42,35 @@
           : ''
     };
   }
+  //Event listener for quote submit form
+  $('#submit-form').on('submit', function(event) {
+    event.preventDefault();
+
+    const info = {
+      title: $('#quote-author').val(),
+      content: $('#quote-text').val(),
+      _qod_quote_source: $('#quote-source').val(),
+      _qod_quote_source_url: $('#quote-url').val()
+    };
+
+    $.ajax({
+      method: 'post',
+      url: qod_vars.rest_url + 'wp/v2/posts/',
+      data: info,
+      success: function() {},
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
+      }
+    })
+      .done(function() {
+        $('.entry-content').html(
+          '<p>Thanks, your quote submission was recieved!</p>'
+        );
+      })
+      .fail(function() {
+        $('.entry-content').html(
+          '<p>Sorry, your quote submission was not recieved.Please try again.</p>'
+        );
+      });
+  });
 })(jQuery);
