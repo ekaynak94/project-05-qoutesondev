@@ -38,15 +38,15 @@
     return {
       id: `post-${quote.id}`,
       text: quote.content.rendered,
-      author: `<h2 class='author-name'>&mdash;${quote.title.rendered}</h2>`,
+      author: `<h2 class='quote-author'>&mdash;${quote.title.rendered}</h2>`,
       url: `${qod_vars.home_url}/${quote.slug}/`,
       source:
         quote._qod_quote_source_url && quote._qod_quote_source
-          ? `<span class='author-source'>, <a href=${
+          ? `<span class='quote-source'>, <a href=${
               quote._qod_quote_source_url
             }>${quote._qod_quote_source}</a></span>`
           : quote._qod_quote_source
-          ? `<span class='author-source'>, ${quote._qod_quote_source}</span>`
+          ? `<span class='quote-source'>, ${quote._qod_quote_source}</span>`
           : ''
     };
   }
