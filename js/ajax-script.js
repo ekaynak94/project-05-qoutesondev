@@ -1,7 +1,13 @@
 (function($) {
+  let lastPage = '';
+  //Make back/forward nav work with history API
+  $(window).on('popstate', function() {
+    window.location.replace(lastPage);
+  });
   // Event listener for quote button
   $('#another-quote').on('click', function(event) {
     event.preventDefault();
+    lastPage = document.URL;
     $.ajax({
       method: 'get',
       url:
@@ -20,11 +26,12 @@
 
   function changeContent(content) {
     //Changes the markup for the page to display a new quote
+    history.pushState(null, null, content.url);
     $('article').removeClass($('article').attr('id'));
     $('article').addClass(content.id);
     $('article').attr('id', content.id);
     $('.entry-content').html(content.text);
-    $('.entry-info').html(content.author + content.link);
+    $('.entry-info').html(content.author + content.source);
   }
   function newQuoteMarkup(quote) {
     //Returns an object that has the markup for the new quote and its content
@@ -32,7 +39,8 @@
       id: `post-${quote.id}`,
       text: quote.content.rendered,
       author: `<h2 class='author-name'>&mdash;${quote.title.rendered}</h2>`,
-      link:
+      url: `${qod_vars.home_url}/${quote.slug}/`,
+      source:
         quote._qod_quote_source_url && quote._qod_quote_source
           ? `<span class='author-source'>, <a class='author-source'
       href=${quote._qod_quote_source_url}
@@ -45,7 +53,6 @@
   //Event listener for quote submit form
   $('#submit-form').on('submit', function(event) {
     event.preventDefault();
-
     const info = {
       title: $('#quote-author').val(),
       content: $('#quote-text').val(),
@@ -63,14 +70,10 @@
       }
     })
       .done(function() {
-        $('.entry-content').html(
-          '<p>Thanks, your quote submission was recieved!</p>'
-        );
+        $('.entry-content').html(`<p>${qod_vars.success}</p>`);
       })
       .fail(function() {
-        $('.entry-content').html(
-          '<p>Sorry, your quote submission was not recieved.Please try again.</p>'
-        );
+        $('.entry-content').html(`<p>${qod_vars.failure}</p>`);
       });
   });
 })(jQuery);
