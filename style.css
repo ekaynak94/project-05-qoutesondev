@@ -319,6 +319,9 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+* {
+  outline: none; }
+
 body {
   background: #222;
   /* Fallback for when there is no custom background color defined. */ }
