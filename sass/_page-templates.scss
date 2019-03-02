@@ -27,7 +27,17 @@ a {
 }
 
 /* Quote content*/
-
+.blog,
+.single-post {
+  .site-main {
+    font-size: 1.25rem;
+    .quote-author {
+      font-size: 1.25rem;
+      font-weight: normal;
+      display: inline-block;
+    }
+  }
+}
 /* All Archives Page */
 
 /* Submit a Quote Page */
