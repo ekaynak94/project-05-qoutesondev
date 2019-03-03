@@ -389,7 +389,7 @@ input[type='submit'] {
   color: #00cc00;
   font-size: 1rem;
   line-height: 1;
-  padding: 0.6rem 1rem 0.4rem; }
+  padding: 0.75rem 2rem; }
   button:active, button:focus, button:hover,
   input[type='button']:active,
   input[type='button']:focus,
