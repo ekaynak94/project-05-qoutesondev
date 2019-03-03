@@ -9,7 +9,7 @@ body {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 2.5%;
 }
 
 /* Quote content*/
@@ -27,6 +27,13 @@ body {
     }
   }
 }
+#another-quote {
+  display: block;
+  @include desktop {
+    margin: 0 auto;
+  }
+}
+
 /* All Archives Page */
 body.page-template-archives-quotes {
   .site-content {
