@@ -636,20 +636,17 @@ body {
   padding: 0.5rem; }
 
 /* Quote content*/
-.blog .site-main,
-.single-post .site-main,
-.archive .site-main {
-  font-size: 1.25rem; }
-  .blog .site-main .quote-author,
-  .single-post .site-main .quote-author,
-  .archive .site-main .quote-author {
-    font-size: 1.25rem;
-    font-weight: normal;
-    display: inline-block; }
-  .blog .site-main .quote-source,
-  .single-post .site-main .quote-source,
-  .archive .site-main .quote-source {
-    font-style: italic; }
+.blog .site-main .quote-author,
+.single-post .site-main .quote-author,
+.archive .site-main .quote-author {
+  font-size: 1.25rem;
+  font-weight: normal;
+  display: inline-block; }
+
+.blog .site-main .quote-source,
+.single-post .site-main .quote-source,
+.archive .site-main .quote-source {
+  font-style: italic; }
 
 /* All Archives Page */
 body.page-template-archives-quotes .site-content li {
