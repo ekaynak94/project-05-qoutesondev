@@ -622,9 +622,12 @@ object {
 .site-logo img {
   height: 45px;
   width: auto; }
-  @media screen and (min-width: 620px) and (max-width: 1080px) {
+  @media screen and (min-width: 620px) {
     .site-logo img {
       height: 75px; } }
+  @media screen and (min-width: 1080px) {
+    .site-logo img {
+      height: 120px; } }
 
 /*--------------------------------------------------------------
 # Page Templates
@@ -683,15 +686,19 @@ body.error404 .search-submit {
   padding: 0 1em; }
   .site-footer li:last-child {
     border-right: none; }
-    @media screen and (min-width: 620px) and (max-width: 1080px) {
+    @media screen and (min-width: 620px) {
       .site-footer li:last-child {
         border-right: 1px solid #ffffff; } }
   .site-footer li:first-child {
     padding-left: 0; }
 
-@media screen and (min-width: 620px) and (max-width: 1080px) {
+@media screen and (min-width: 620px) {
   .site-footer p,
   .site-footer nav {
     display: inline-block; }
   .site-footer p {
     padding-left: 1em; } }
+
+@media screen and (min-width: 1080px) {
+  .site-footer {
+    text-align: right; } }

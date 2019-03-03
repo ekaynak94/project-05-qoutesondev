@@ -25,4 +25,7 @@
       padding-left: 1em;
     }
   }
+  @include desktop {
+    text-align: right;
+  }
 }
