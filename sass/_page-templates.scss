@@ -42,13 +42,16 @@ body.archive {
       border-bottom: 1px dotted $color__text-main;
       padding-bottom: 2rem;
     }
-    h1 {
-      @extend article;
-      padding-bottom: 1rem;
-    }
   }
 }
-
+/*General archives and Search result page*/
+body.archive,
+body.search-results {
+  h1 {
+    border-bottom: 1px dotted $color__text-main;
+    padding-bottom: 1rem;
+  }
+}
 /*404 Page*/
 body.error404 {
   fieldset {

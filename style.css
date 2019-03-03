@@ -47,7 +47,7 @@ html {
 body {
   margin: 0; }
 
-article, body.archive .site-main h1,
+article,
 aside,
 details,
 figcaption,
@@ -653,11 +653,14 @@ body.page-template-archives-quotes .site-content li {
   margin: 0 0.85em 0.7em 0; }
 
 /* General Archives Page */
-body.archive .site-main article, body.archive .site-main h1 {
+body.archive .site-main article {
   border-bottom: 1px dotted #ffffff;
   padding-bottom: 2rem; }
 
-body.archive .site-main h1 {
+/*General archives and Search result page*/
+body.archive h1,
+body.search-results h1 {
+  border-bottom: 1px dotted #ffffff;
   padding-bottom: 1rem; }
 
 /*404 Page*/
