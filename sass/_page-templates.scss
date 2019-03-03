@@ -12,6 +12,32 @@ body {
   padding: 2.5%;
 }
 
+@include desktop {
+  .site-content {
+    margin: 3rem 10rem 1rem;
+    position: relative;
+    &:before,
+    &:after {
+      color: $color__brand-color;
+      font-family: FontAwesome;
+      font-size: 7rem;
+      line-height: 7rem;
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      content: '\f10d';
+      left: -8rem;
+    }
+
+    &:after {
+      content: '\f10e';
+      right: -8rem;
+    }
+  }
+}
+
 /* Quote content*/
 .blog,
 .single-post,

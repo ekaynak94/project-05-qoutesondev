@@ -619,6 +619,10 @@ object {
   max-width: 100%; }
 
 /*Header*/
+@media screen and (min-width: 1080px) {
+  .site-header {
+    text-align: center; } }
+
 .site-logo img {
   height: 45px;
   width: auto; }
@@ -639,7 +643,25 @@ body {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.5rem; }
+  padding: 2.5%; }
+
+@media screen and (min-width: 1080px) {
+  .site-content {
+    margin: 3rem 10rem 1rem;
+    position: relative; }
+    .site-content:before, .site-content:after {
+      color: #00cc00;
+      font-family: FontAwesome;
+      font-size: 7rem;
+      line-height: 7rem;
+      position: absolute;
+      top: 0; }
+    .site-content:before {
+      content: '\f10d';
+      left: -8rem; }
+    .site-content:after {
+      content: '\f10e';
+      right: -8rem; } }
 
 /* Quote content*/
 .blog .site-main .quote-author,
@@ -653,6 +675,12 @@ body {
 .single-post .site-main .quote-source,
 .archive .site-main .quote-source {
   font-style: italic; }
+
+#another-quote {
+  display: block; }
+  @media screen and (min-width: 1080px) {
+    #another-quote {
+      margin: 0 auto; } }
 
 /* All Archives Page */
 body.page-template-archives-quotes .site-content li {
