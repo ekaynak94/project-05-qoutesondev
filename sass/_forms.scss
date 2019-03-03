@@ -8,8 +8,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  border: 1px solid;
-  border-color: $color__brand-color;
+  border: 1px solid $color__brand-color;
   border-radius: 3px;
   background-color: $color__background-body;
   color: $color__brand-color;
@@ -33,12 +32,14 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  border: 1px solid $color__brand-color;
   border-radius: 3px;
+  background-color: $color__background-body;
+  color: $color__brand-color;
 
   &:focus {
-    color: #111;
+    border-color: $color__link-hover;
+    $color__link-hover: #00aa00;
   }
 }
 
@@ -48,6 +49,7 @@ input[type='url'],
 input[type='password'],
 input[type='search'] {
   padding: 3px;
+  margin: 1rem auto;
 }
 
 textarea {
