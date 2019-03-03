@@ -1,4 +1,9 @@
 /*Header*/
+.site-header {
+  @include desktop {
+    text-align: center;
+  }
+}
 .site-logo img {
   height: 45px;
   width: auto;
