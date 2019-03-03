@@ -432,6 +432,7 @@ input[type='search'] {
 
 textarea {
   padding-left: 3px;
+  margin: 1rem auto;
   width: 100%; }
 
 /*--------------------------------------------------------------
