@@ -4,13 +4,25 @@
     margin: 3rem auto;
   }
   li {
-    border-right: 1px solid white;
+    border-right: 1px solid $color__text-main;
     padding: 0 1em;
     &:last-child {
       border-right: none;
+      @include tablet {
+        border-right: 1px solid $color__text-main;
+      }
     }
     &:first-child {
       padding-left: 0;
+    }
+  }
+  @include tablet {
+    p,
+    nav {
+      display: inline-block;
+    }
+    p {
+      padding-left: 1em;
     }
   }
 }

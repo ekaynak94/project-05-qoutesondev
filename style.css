@@ -622,6 +622,9 @@ object {
 .site-logo img {
   height: 45px;
   width: auto; }
+  @media screen and (min-width: 620px) and (max-width: 1080px) {
+    .site-logo img {
+      height: 75px; } }
 
 /*--------------------------------------------------------------
 # Page Templates
@@ -676,9 +679,19 @@ body.error404 .search-submit {
   margin: 3rem auto; }
 
 .site-footer li {
-  border-right: 1px solid white;
+  border-right: 1px solid #ffffff;
   padding: 0 1em; }
   .site-footer li:last-child {
     border-right: none; }
+    @media screen and (min-width: 620px) and (max-width: 1080px) {
+      .site-footer li:last-child {
+        border-right: 1px solid #ffffff; } }
   .site-footer li:first-child {
     padding-left: 0; }
+
+@media screen and (min-width: 620px) and (max-width: 1080px) {
+  .site-footer p,
+  .site-footer nav {
+    display: inline-block; }
+  .site-footer p {
+    padding-left: 1em; } }

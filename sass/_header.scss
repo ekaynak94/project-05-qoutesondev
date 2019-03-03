@@ -2,4 +2,8 @@
 .site-logo img {
   height: 45px;
   width: auto;
+
+  @include tablet {
+    height: 75px;
+  }
 }
