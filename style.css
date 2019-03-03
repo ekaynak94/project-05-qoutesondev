@@ -345,7 +345,12 @@ ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  margin: 1em 0;
+  padding: 0;
+  list-style: none; }
+  ul li {
+    display: inline-block;
+    padding: 0 1em 0.5em 0; }
 
 ol {
   list-style: decimal; }
@@ -622,14 +627,6 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   padding: 1rem; }
-
-ul {
-  margin: 1em 0;
-  padding: 0;
-  list-style: none; }
-  ul li {
-    display: inline-block;
-    padding: 0 0.5em; }
 
 a {
   text-decoration: none; }
