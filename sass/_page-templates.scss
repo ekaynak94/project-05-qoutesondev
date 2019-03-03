@@ -14,13 +14,17 @@ body {
 
 /* Quote content*/
 .blog,
-.single-post {
+.single-post,
+.archive {
   .site-main {
     font-size: 1.25rem;
     .quote-author {
       font-size: 1.25rem;
       font-weight: normal;
       display: inline-block;
+    }
+    .quote-source {
+      font-style: italic;
     }
   }
 }
@@ -32,5 +36,16 @@ body.page-template-archives-quotes {
     }
   }
 }
-
 /* General Archives Page */
+body.archive {
+  .site-main {
+    article {
+      border-bottom: 1px dotted $color__text-main;
+      padding-bottom: 2rem;
+    }
+    h1 {
+      @extend article;
+      padding-bottom: 1rem;
+    }
+  }
+}

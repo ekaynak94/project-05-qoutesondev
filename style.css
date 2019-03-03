@@ -47,7 +47,7 @@ html {
 body {
   margin: 0; }
 
-article,
+article, body.archive .site-main h1,
 aside,
 details,
 figcaption,
@@ -636,19 +636,32 @@ body {
 
 /* Quote content*/
 .blog .site-main,
-.single-post .site-main {
+.single-post .site-main,
+.archive .site-main {
   font-size: 1.25rem; }
   .blog .site-main .quote-author,
-  .single-post .site-main .quote-author {
+  .single-post .site-main .quote-author,
+  .archive .site-main .quote-author {
     font-size: 1.25rem;
     font-weight: normal;
     display: inline-block; }
+  .blog .site-main .quote-source,
+  .single-post .site-main .quote-source,
+  .archive .site-main .quote-source {
+    font-style: italic; }
 
 /* All Archives Page */
 body.page-template-archives-quotes .site-content li {
   margin: 0 0.85em 0.7em 0; }
 
 /* General Archives Page */
+body.archive .site-main article, body.archive .site-main h1 {
+  border-bottom: 1px dotted #ffffff;
+  padding-bottom: 2rem; }
+
+body.archive .site-main h1 {
+  padding-bottom: 1rem; }
+
 /*Footer*/
 .site-footer .site-info {
   margin: 3rem auto; }
