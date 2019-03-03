@@ -35,11 +35,10 @@ textarea {
   border: 1px solid $color__brand-color;
   border-radius: 3px;
   background-color: $color__background-body;
-  color: $color__brand-color;
+  color: $color__text-main;
 
   &:focus {
-    border-color: $color__link-hover;
-    $color__link-hover: #00aa00;
+    border-color: $color__text-main;
   }
 }
 

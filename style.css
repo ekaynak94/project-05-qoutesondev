@@ -413,14 +413,14 @@ textarea {
   border: 1px solid #00cc00;
   border-radius: 3px;
   background-color: #222;
-  color: #00cc00; }
+  color: #ffffff; }
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='url']:focus,
   input[type='password']:focus,
   input[type='search']:focus,
   textarea:focus {
-    border-color: #00aa00; }
+    border-color: #ffffff; }
 
 input[type='text'],
 input[type='email'],
@@ -662,6 +662,14 @@ body.archive .site-main article, body.archive .site-main h1 {
 
 body.archive .site-main h1 {
   padding-bottom: 1rem; }
+
+/*404 Page*/
+body.error404 fieldset {
+  border: none; }
+
+body.error404 .search-submit {
+  border: none;
+  padding: 0 0.5rem; }
 
 /*Footer*/
 .site-footer .site-info {

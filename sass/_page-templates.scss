@@ -49,3 +49,15 @@ body.archive {
     }
   }
 }
+
+/*404 Page*/
+body.error404 {
+  fieldset {
+    border: none;
+  }
+
+  .search-submit {
+    border: none;
+    padding: 0 0.5rem;
+  }
+}
