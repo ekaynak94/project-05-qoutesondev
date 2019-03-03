@@ -1,0 +1,16 @@
+/*Footer*/
+.site-footer {
+  .site-info {
+    margin: 3rem auto;
+  }
+  li {
+    border-right: 1px solid white;
+    padding: 0 1em;
+    &:last-child {
+      border-right: none;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
