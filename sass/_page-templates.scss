@@ -25,5 +25,12 @@ body {
   }
 }
 /* All Archives Page */
+body.page-template-archives-quotes {
+  .site-content {
+    li {
+      margin: 0 0.85em 0.7em 0;
+    }
+  }
+}
 
-/* Submit a Quote Page */
+/* General Archives Page */

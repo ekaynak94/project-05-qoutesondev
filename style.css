@@ -645,7 +645,10 @@ body {
     display: inline-block; }
 
 /* All Archives Page */
-/* Submit a Quote Page */
+body.page-template-archives-quotes .site-content li {
+  margin: 0 0.85em 0.7em 0; }
+
+/* General Archives Page */
 /*Footer*/
 .site-footer .site-info {
   margin: 3rem auto; }
