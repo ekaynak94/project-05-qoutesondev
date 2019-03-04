@@ -713,6 +713,12 @@ body.error404 .search-submit {
   border: none;
   padding: 0 0.5rem; }
 
+/* Submit a Quote Page*/
+#submit-form label,
+#submit-form input {
+  display: block;
+  margin: 0.75rem 0; }
+
 /*Footer*/
 .site-footer .site-info {
   margin: 3rem auto; }
