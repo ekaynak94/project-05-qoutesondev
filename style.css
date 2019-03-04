@@ -674,6 +674,7 @@ body {
 .blog .site-main .quote-source,
 .single-post .site-main .quote-source,
 .archive .site-main .quote-source {
+  font-size: 1.25rem;
   font-style: italic; }
 
 @media screen and (min-width: 1080px) {
