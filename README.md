@@ -32,4 +32,4 @@ cd quotes-on-dev
 npm install
 ```
 
-- Enable custom theme 'quotes-on-dev' in Worldpress dashboard.
+- Enable custom theme 'quotes-on-dev' in Wordpress dashboard.
