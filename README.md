@@ -1,6 +1,6 @@
 # Quotes on Dev Starter
 
-A WordPress theme for the Quotes on Dev project, forked from Underscores.
+A WordPress theme for the Quotes on Dev project
 
 ## Screenshots
 
@@ -11,7 +11,7 @@ A WordPress theme for the Quotes on Dev project, forked from Underscores.
 
 Emre Kaynak (https://github.com/ekaynak94)
 
-## Skills Aquired/Used
+## Technologies Used
 
 -HTLM5
 -CSS3/SASS
@@ -19,24 +19,17 @@ Emre Kaynak (https://github.com/ekaynak94)
 -PHP
 -WORDPRESS/REST API
 
-## Built With
-
 ## Installation
 
-### 1. Download me (don't clone me!)
+- Download or clone repo to Wordpress wp-content/themes directory.
+- Run the following commands in the directory:
 
-Then add me to your `wp-content/themes` directory.
+```bash
+cd quotes-on-dev
+```
 
-### 2. Rename the `quotesondev-starter-master` directory
+```bash
+npm install
+```
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
-
-### 3. Install the dev dependencies
-
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
-
-And now would be a good time to `git init` :)
+- Enable custom theme 'quotes-on-dev' in Worldpress dashboard.
