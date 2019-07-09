@@ -1,7 +1,7 @@
 {
-  "name": "quotesondev-starter",
+  "name": "quotesondev",
   "version": "1.0.0",
-  "description": "A WordPress starter theme for the Quotes on Dev project, forked from Underscores.",
+  "description": "A custom WordPress theme for the Quotes on Dev project",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -24,12 +24,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/quotesondev-starter.git"
+    "url": "git+https://github.com/ekaynak94/qoutes-on-dev"
   },
-  "author": "mandiwise",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/redacademy/quotesondev-starter/issues"
-  },
-  "homepage": "https://github.com/redacademy/quotesondev-starter#readme"
+  "author": "emrekaynak",
+  "license": "ISC"
 }
